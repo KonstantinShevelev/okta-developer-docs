@@ -1,3 +1,11 @@
 .block__comment {
+  --block-comment-gap: 40px;
+
+  margin-top: var(--block-comment-gap);
+
   border-top: 1px solid cv("arch", "border");
+
+  @include media(">tablet") {
+    --block-comment-gap: 75px;
+  }
 }

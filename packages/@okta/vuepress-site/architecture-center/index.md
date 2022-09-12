@@ -78,33 +78,3 @@ title: Architecture Center
     </p>
   </figcaption>
 </figure>
-
-<div class="block">
-  <form
-    class="block__comment comment"
-    action=""
-    method=""
-  >
-    <h3 class="comment__title">
-      Did you find what you were looking for?
-    </h3>
-    <p class="comment__subtitle">
-      Your feedback helps us improve our docs.
-    </p>
-    <button
-      class="comment__button comment__button_type_like"
-      type="button"
-      aria-label="Like"
-    ></button>
-    <button
-      class="comment__button comment__button_type_dislike"
-      type="button"
-      aria-label="Dislike"
-    ></button>
-    <textarea
-      class="comment__textarea"
-      name="user_message"
-      placeholder="What else can you tell us about this content?"
-    ></textarea>
-  </form>
-</div>
