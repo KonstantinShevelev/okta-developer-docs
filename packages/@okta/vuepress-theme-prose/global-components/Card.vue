@@ -107,7 +107,6 @@ export default {
     },
     methods: {
       isURLAbsolute(URL) {
-        console.log(URL);
         return URL.indexOf('://') > 0 ||
                URL.indexOf('//') === 0
       },
