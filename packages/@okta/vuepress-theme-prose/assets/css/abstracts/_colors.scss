@@ -100,6 +100,7 @@
   --c-body-gray: var(--c-dark-gray);
   --c-arch-item: var(--c-gray-md);
   --c-arch-card-bg: var(--c-lightgray-900);
+  --c-arch-card-link: var(--c-blue-500);
   --c-tag-bg: var(--c-gray-100);
   --c-tag-text: var(--c-gray-800);
 }
@@ -126,6 +127,7 @@
   --c-light: #d7d7dc;
   --c-blue-200: #CFE4F6;
   --c-blue-300: #92bcff;
+  --c-blue-700: #72a8ff;
   --c-blue-800: #234f97;
   --c-blue-darker: #5976a6;
   --c-checkbox-border: #c1c1c8;
@@ -189,6 +191,7 @@
   --c-custom-bg-icon: var(--c-blue-000);
   --c-arch-item: var(--c-coal);
   --c-arch-card-bg: var(--c-gray-750);
+  --c-arch-card-link: var(--c-blue-700);
   --c-tag-bg: var(--c-gray-550);
   --c-tag-text: var(--c-gray-250);
 }
@@ -197,6 +200,7 @@ $colors: (
   "arch": (
     "item": var(--c-arch-item),
     "card": var(--c-arch-card-bg),
+    "link": var(--c-arch-card-link)
   ),
   "tag": (
     "text": var(--c-tag-text),

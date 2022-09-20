@@ -1,6 +1,7 @@
 <template>
   <SmartLink
     :item="{ link: href }"
+    :class="type ? 'card_type_secondary' : ''"
     classes="card is-card-action is-card-clickable"
   >
     <header class="card--header">
@@ -44,6 +45,12 @@
         <slot>
           Commodo deserunt nulla Lorem veniam do minim consectetur ea in.
         </slot>
+        <span
+          v-if="type === 'secondary'"
+          class="card__link"
+        >
+          Learn more
+        </span>
       </p>
     </section>
     <footer
@@ -65,6 +72,10 @@ export default {
         SmartLink: () => import("../components/SmartLink.vue")
     },
     props: {
+        type: {
+          default: "",
+          type: String,
+        },
         href: {
             default: "#",
             type: String,
