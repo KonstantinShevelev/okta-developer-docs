@@ -15,7 +15,7 @@
         ></i>
       </figure>
       <figure
-        v-else-if="headerImage"
+        v-else-if="checkImageExists(headerImage)"
         class="card--header-icon"
       >
         <div>
@@ -105,6 +105,26 @@ export default {
             type: Boolean,
         },
     },
+    methods: {
+      isURLAbsolute(URL) {
+        console.log(URL);
+        return URL.indexOf('://') > 0 ||
+               URL.indexOf('//') === 0
+      },
+
+      checkImageExists(imageURL) {
+        const isImageURLRelative =
+          !this.isURLAbsolute(imageURL) ?
+            `${location.origin}${imageURL}` : null;
+
+        const http = new XMLHttpRequest();
+
+        http.open('HEAD', isImageURLRelative || imageURL, false);
+        http.send();
+
+        return http.status != 404;
+      }
+    }
 };
 </script>
 
