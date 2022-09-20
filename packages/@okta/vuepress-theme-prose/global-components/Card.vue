@@ -32,6 +32,15 @@
         >
           {{ cardTitle }}
         </h2>
+        <div
+          v-if="tags"
+          class="card__wrapper"
+        >
+          <Tag
+            v-for="tag in tags"
+            :text="tag.text"
+          />
+        </div>
         <section
           v-if="cardMeta"
           class="card--meta"
@@ -69,7 +78,8 @@
 <script>
 export default {
     components: {
-        SmartLink: () => import("../components/SmartLink.vue")
+        SmartLink: () => import("../components/SmartLink.vue"),
+        Tag: () => import("./Tag.vue"),
     },
     props: {
         type: {
@@ -91,6 +101,10 @@ export default {
         cardTitle: {
             default: "",
             type: String,
+        },
+        tags: {
+          default: [],
+          type: Array,
         },
         cardMeta: {
             default: "",
