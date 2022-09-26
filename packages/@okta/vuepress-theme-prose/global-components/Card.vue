@@ -103,8 +103,8 @@ export default {
             type: String,
         },
         tags: {
-          default: [],
           type: Array,
+          required: false
         },
         cardMeta: {
             default: "",
