@@ -11,6 +11,7 @@
         return a === b;
       }
     },
+
     mounted() {
       window.addEventListener("load", () => {
          const cardsOwn = document.querySelectorAll(".cards-own");
