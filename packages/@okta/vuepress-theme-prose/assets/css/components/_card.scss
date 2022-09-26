@@ -1,16 +1,23 @@
 .cards-own {
+  --columns: repeat(auto-fit, minmax(200px, 1fr));
+
   display: grid;
   grid-gap: 20px;
   grid-auto-rows: 1fr;
   align-items: stretch;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: var(--columns);
 
-  &.cols-4 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  &_type_secondary {
+    --columns: 1fr;
   }
+
+  &_type_secondary .card {
+    max-width: none !important;
+  }
+
   .card {
     position: relative;
-    align-self: start;
+    align-self: stretch;
     max-width: 50ch;
     border: 1px solid #b7bcc0;
     border-radius: 4px;
