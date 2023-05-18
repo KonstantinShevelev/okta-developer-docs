@@ -9,6 +9,14 @@ describe('Sign up page check spec', () => {
     signUpPage.visitSignUpPage();
   });
 
+  // *
+  // **
+  // ***
+  // Tests for the old version of the Sign Up page below. On the new design, they are not relevant, so they are commented out.
+  // ***
+  // **
+  // *
+
   // it('should show all the fields and buttons', () => {
   //   signUpPage.getEmailInput().should('exist');
   //   signUpPage.getFirsNameInput().should('exist');
